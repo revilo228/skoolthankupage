@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congrats! You're In... (One More Step)</title>
+    <title>The 'Billionaire's Blueprint' - Unlock Your Potential for $37</title>
+    <!--
+    =================================================
+    == MICROSOFT CLARITY SCRIPT ==
+    =================================================
+    -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "u7qcnghg1s");
+    </script>
+    
+    <!-- STRIPE SCRIPT REMOVED - USING DIRECT LINK -->
+
     <style>
         :root {
-            --color-primary: #FF33A1;
-            --color-accent: #00E5E5;
-            --color-dark: #242424; /* NEW */
-            --color-gray: #2E2E2E; /* NEW */
+            /* == BRAND AURA THEME == */
+            --color-primary: #FF33A1; /* Magenta/Pink */
+            --color-secondary: #FF9933; /* Orange */
+            --color-accent: #00E5E5;   /* Cyan */
+            
+            /* == NEW PREMIUM DARK MODE PALETTE (USER'S CHOICE) == */
+            --color-dark: #242424;   /* Section BG */
+            --color-gray: #2E2E2E;   /* Card BG */
             --color-text: #ccc;
         }
 
@@ -19,18 +38,29 @@
             box-sizing: border-box;
         }
 
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background: #1B1B1B; /* USER'S CHOICE */
             color: #fff;
+            overflow-x: hidden;
             line-height: 1.6;
+            width: 100%;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 15px;
-            text-align: center;
+            padding: 0 15px;
+        }
+        
+        /* Gradient Background */
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
         }
         
         .gradient-text {
@@ -42,45 +72,48 @@
             animation: gradientMove 3s ease-in-out infinite;
         }
 
-        .header-icon {
-            font-size: 3rem;
+        /* == 1. STICKY HEADER (THE HOOK) == */
+        .sticky-header {
+            background: var(--color-dark);
+            color: #fff;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        .sticky-header h1 {
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            font-weight: 700;
             color: var(--color-accent);
         }
 
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+        /* == 2. HERO / VSL (THE CONVERSION ZONE) == */
+        .hero {
+            padding: 4rem 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 2.5rem;
+            align-items: flex-start;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 900;
             line-height: 1.2;
-            margin: 1rem 0;
-        }
-        
-        h1 span {
-            color: var(--color-primary);
-            display: block;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--color-text);
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
-        
-        p.check-email {
-            font-size: 1.1rem;
             color: #fff;
-            background: var(--color-gray);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-        
-        p.check-email strong {
-            color: var(--color-accent);
         }
 
-        .vsl-container {
-            margin: 3rem 0;
+        .hero-content h2 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--color-text);
+            font-weight: 300;
+            margin: 1.5rem 0;
         }
 
         .vsl-placeholder {
@@ -101,23 +134,370 @@
             content: '▶';
             font-size: 3rem;
             color: var(--color-primary);
+            opacity: 0.8;
+            transition: all 0.3s ease;
         }
         
+        .vsl-placeholder:hover::before {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
         .vsl-placeholder p {
-            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--color-primary);
         }
         
-        .cta-button {
+        /* == CROWD PROOF (TRUST ANCHOR) == */
+        .crowd-proof {
+            background: var(--color-gray);
+            border: 2px solid var(--color-accent);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        
+        .crowd-proof p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .crowd-proof .highlight {
+            color: var(--color-accent);
+        }
+
+        /* == 2-STEP ORDER FORM (THE ACTION) == */
+        .order-form {
+            background: var(--color-gray);
+            border-radius: 16px;
+            border: 2px solid var(--color-primary);
+            padding: 2rem;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .order-form h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .order-form .price {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .order-form .price span {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: #777;
+            margin-right: 0.5rem;
+        }
+
+        /* URGENCY TIMER */
+        .urgency-timer {
+            background: linear-gradient(135deg, #FF4444 0%, #CC0000 100%);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .urgency-timer p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        #countdown {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        /* DIRECT CHECKOUT BUTTON */
+        .direct-checkout-btn {
             display: block;
             width: 100%;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            background: var(--gradient-bg);
             color: #fff;
-            padding: 20px;
+            padding: 18px;
             text-decoration: none;
             border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 51, 161, 0.4);
+            margin-top: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .direct-checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 51, 161, 0.6);
+        }
+        
+        .direct-checkout-btn::after {
+            content: '→';
+            margin-left: 10px;
+            font-weight: 900;
+        }
+
+        .guarantee-badge {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .guarantee-badge svg {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            color: var(--color-accent);
+            margin-right: 5px;
+        }
+
+        /* == 3. "US VS. THEM" (THE FRAME) == */
+        .us-vs-them {
+            background: var(--color-dark);
+            padding: 4rem 0;
+            border-top: 1px solid #333;
+        }
+        
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section-title.gradient-text {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientMove 3s ease-in-out infinite;
+        }
+        
+        .us-vs-them p {
+            font-size: 1.2rem;
+            color: var(--color-text);
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            text-align: center;
+            line-height: 1.7;
+        }
+        
+        .us-vs-them p strong {
+            color: #fff;
+        }
+
+        /* NEW: 3-Column Grid for Us vs. Them */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .comparison-card {
+            background: var(--color-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+        
+        .comparison-card h3 {
             font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #aaa;
+        }
+        
+        .comparison-card ul {
+            list-style: none;
+        }
+        
+        .comparison-card li {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #aaa;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .comparison-card li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        .comparison-card.us h3 {
+            color: var(--color-primary);
+        }
+
+        .comparison-card.us li {
+            color: #fff;
+        }
+        
+        .comparison-card.us {
+            border: 2px solid var(--color-primary);
+            box-shadow: 0 0 20px rgba(255, 51, 161, 0.3);
+        }
+
+        .comparison-card.us li::before {
+            content: '✅';
+            color: var(--color-accent);
+        }
+
+
+        /* == 4. MY STORY (THE RELATABILITY) == */
+        .story-section {
+            padding: 4rem 0;
+            background: #1B1B1B; /* Match body */
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .story-image-placeholder {
+            width: 300px;
+            height: 300px;
+            background: var(--color-gray);
+            border-radius: 50%;
+            border: 4px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #888;
+        }
+        
+        .story-content h3 {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .story-content p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        /* == 5. OFFER STACK (THE VALUE) == */
+        .offer-stack-section {
+            padding: 4rem 0;
+            background: var(--color-dark);
+        }
+        
+        .offer-stack-section p.subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .offer-stack {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .offer-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            background: var(--color-gray);
+            border-radius: 12px;
+            border-left: 4px solid var(--color-primary);
+        }
+        
+        .offer-icon {
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .offer-content h3 {
+            color: #fff;
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        
+        /* UPGRADED: Full gradient value badge */
+        .value-badge {
+            background: var(--gradient-bg);
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .total-value {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .total-value span {
+            text-decoration: line-through;
+            color: #888;
+            font-weight: 400;
+        }
+        
+        .total-value .final-price {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+        }
+        
+        .final-cta-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto 0 auto;
+            background: var(--gradient-bg);
+            color: #fff;
+            padding: 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
             font-weight: 700;
             transition: all 0.3s ease;
             text-transform: uppercase;
@@ -125,88 +505,479 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 6px 20px rgba(255, 51, 161, 0.3);
-            animation: pulse 2s infinite;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 51, 161, 0.4);
+        /* == 6. GUARANTEE (RISK REVERSAL) == */
+        .guarantee-section {
+            padding: 4rem 0;
+            background: #1B1B1B; /* Match body */
         }
         
-        .cta-subtitle {
-            font-size: 1rem;
-            color: #aaa;
-            margin-top: 1rem;
-            font-weight: 600;
+        .guarantee-box {
+            background: var(--color-gray);
+            border: 2px solid var(--color-accent);
+            border-radius: 16px;
+            padding: 2.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
         
-        .no-thanks {
-            display: block;
-            color: #777;
-            text-decoration: underline;
+        .guarantee-box h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+        
+        .guarantee-box p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+        
+        /* NEW: Guarantee Signature Block */
+        .guarantee-signature {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
             margin-top: 2rem;
-            font-size: 0.9rem;
+            border-top: 1px solid #333;
+            padding-top: 2rem;
         }
         
-        .no-thanks:hover {
-            color: #999;
+        .guarantee-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--color-gray);
+            border: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        .guarantee-text {
+            text-align: left;
+            font-style: italic;
+            color: #fff;
+        }
+        
+        .guarantee-text img {
+            height: 40px;
+            filter: invert(1);
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .guarantee-text p {
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        .guarantee-text span {
+            font-size: 0.9rem;
+            color: var(--color-text);
+        }
+
+        /* == NEW: SOCIAL PROOF POPUP == */
+        .social-proof-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--color-gray);
+            border-radius: 8px;
+            border: 1px solid var(--color-primary);
+            padding: 1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1001;
+            
+            /* Start hidden and off-screen */
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            
+            transition: all 0.5s ease-in-out;
+        }
+
+        .social-proof-popup.show {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        .popup-icon {
+            font-size: 1.5rem;
+        }
+
+        .popup-text p {
+            font-size: 0.9rem;
+            color: #fff;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .popup-text p strong {
+            color: var(--color-accent);
+        }
+        
+        .popup-text span {
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        /* == 7. ASCENSION (HIGH-TICKET OFFERS) == */
+        /* ENTIRE SECTION DELETED. THIS PAGE HAS ONE GOAL. */
+
+        /* == MODAL STYLES == */
+        /* ALL MODAL STYLES DELETED. */
+
+
+        /* == RESPONSIVENESS == */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-form {
+                position: static;
+                margin-top: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .story-image-placeholder {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto 1.5rem auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content h2 {
+                font-size: 1rem;
+            }
+            .order-form {
+                padding: 1.5rem;
+            }
+            .offer-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .offer-icon {
+                margin: 0 0 1rem 0;
+            }
         }
 
         @keyframes gradientMove {
             0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
         }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
-
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <div class="header-icon">✅</div>
-        
-        <h1><span>Congrats. You're In.</span>
-            (But Don't Close This Page)</h1>
-        
-        <h2>Your login for the Skool is on its way to your inbox.</h2>
-        
-        <p class="check-email">
-            Check your email for <strong>"Your 'Billionaire's Blueprint' Access"</strong>.
-        </p>
-        
-        <div class="vsl-container">
-            <!-- 
-                THIS IS YOUR UPSELL VSL.
-                Script: "Congrats. You have the blueprint. Now you have 2 paths.
-                Path A: The 'Slow Path'. Go through the course yourself.
-                Path B: The 'Fast Path'. Let me *personally* install this for you.
-                As a new member, I'm offering a FREE 1-on-1 'Clarity Call' to build
-                your 90-day plan. I have 10 spots this week.
-                Click below to book your FREE call."
-            -->
-            <div class="vsl-placeholder" onclick="alert('This is the UPSELL VSL!')">
-                <p>WATCH THIS (MANDATORY)</p>
-            </div>
-        </div>
-
-        <a href="https://calendly.com/your-setter-link" class="cta-button" target="_blank">
-            Book My FREE 1-on-1 Clarity Call NOW
-        </a>
-        <p class="cta-subtitle">
-            🔥 WARNING: Spots are *Extremely* Limited.
-        </p>
-        
-        <a href="httpsPOST://skool.com/your-community-link" class="no-thanks">
-            No thanks, I'll take the 'slow path' and go straight to the community
-        </a>
-
+    <!-- == 1. STICKY HEADER (THE HOOK) == -->
+    <div class="sticky-header">
+        <h1>Tired of 'Crystal & Incense' Astrology? Get The System For Financial Freedom.</h1>
     </div>
 
+    <!-- == 2. HERO / VSL (THE CONVERSION ZONE) == -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- LEFT COLUMN: THE SELL -->
+                <div class="hero-content">
+                    <h1>Stop Guessing. Start *Achieving*.</h1>
+                    <!-- UPDATED H2 - MORE SPECIFIC TO DATA -->
+                    <h2>How To Use The 'Billionaire's Blueprint' (Vedic + Numerology) To Build Financial Freedom, Find Your Ideal Career, and Master Your Investments.</h2>
+                    
+                    <!-- VSL PLACEHOLDER -->
+                    <div class="vsl-placeholder" onclick="alert('Video player would go here!')">
+                        <p>Watch This 5-Min VSL (Mandatory)</p>
+                    </div>
+
+                    <!-- CROWD PROOF (TRUST ANCHOR) -->
+                    <div class="crowd-proof">
+                        <p>Join <span class="highlight">900+</span> Active Members & <span class="highlight">18,000+</span> Followers Who Get It.</p>
+                    </div>
+                </div>
+                
+                <!-- RIGHT COLUMN: THE ACTION (2-STEP FORM) -->
+                <div class="order-form">
+                    <h3>Get Instant Access</h3>
+                    <div class="price"><span>£1,000+</span> $37</div>
+                    
+                    <!-- URGENCY TIMER -->
+                    <div class="urgency-timer">
+                        <p>Charter Member Rate Expires In:</p>
+                        <div id="countdown">00:00:00</div>
+                    </div>
+                    
+                    <!-- BULLETPROOF CHECKOUT BUTTON (Direct Link) -->
+                    <!-- 
+                         This replaces the complex script with a simple, unshakeable link.
+                         It removes the "Something went wrong" error 100% of the time.
+                    -->
+                    <a href="https://buy.stripe.com/test_aFa3cx1IaaoddJ7gxV2sM00" class="direct-checkout-btn">
+                        Unlock My Blueprint Now
+                    </a>
+                    
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #888;">
+                        Secure checkout via Stripe. Instant access.
+                    </p>
+                    
+                    <div class="guarantee-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 002.75 12.134c.142.341.322.668.526.965.202.296.42.578.658.84.238.261.494.507.764.737.27.23.556.446.856.647.3.199.615.384.943.553.328.168.668.32.997.47.37.167.75.318.113.45.38.132.76.246 1.14.341.38.094.75.17 1.13.228.38.058.75.099 1.13.12.38.02.75.028 1.13.028s.75-.007 1.13-.028c.38-.02.75-.062 1.13-.12.38-.058.75-.134 1.13-.228.38-.095.76-.21 1.14-.34.38-.133.76-.282 1.13-.45.33-.169.66-.32.99-.47.33-.17.65-.35.94-.55.3-.2.58-.42.85-.65.27-.23.53-.47.76-.73.24-.26.46-.54.66-.84.2-.3.38-.62.52-1 .28-1.2.4-2.4.4-3.6 0-4.5-3.6-8-8-8zm-1.13 12.323l-3.2-3.2a.75.75 0 011.06-1.06l2.67 2.67 5.53-5.53a.75.75 0 011.06 1.06l-6.06 6.06a.75.75 0 01-1.06 0z" clip-rule="evenodd" /></svg>
+                        100% "No-BS" Money-Back Guarantee
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- == 3. "US VS. THEM" (THE FRAME) == -->
+    <section class="us-vs-them">
+        <div class="container">
+            <h2 class="section-title gradient-text">This Isn't Your Girlfriend's Astrology.</h2>
+            <p>I'm not the "crystal-loving, manifest-it" astrologer who tells you to "claim" energy from a TikTok video. That's a joke.</p>
+            <!-- UPDATED "US" STATEMENT - DATA-DRIVEN -->
+            <p><strong>I am the guy who uses this system to make you money, to make you more efficient, to find your *purpose*, and to build your *financial freedom*.</strong> This is about real, tangible, strategic results.</p>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>The "Crystal Girl" Way</h3>
+                    <ul>
+                        <li>Vague "Sun Sign" nonsense</li>
+                        <li>Tells you to "manifest"</li>
+                        <li>Focuses on crystals & incense</li>
+                        <li>Leaves you hopeful, but broke</li>
+                    </ul>
+                </div>
+                
+                <!-- NEW "FINANCE BRO" COLUMN -->
+                <div class="comparison-card">
+                    <h3>The "Finance Bro" Way</h3>
+                    <ul>
+                        <li>"Soulless" spreadsheets</li>
+                        <li>Ignores intuition & timing</li>
+                        <li>Burns you out in 2 years</li>
+                        <li>Leaves you rich, but empty</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card us">
+                    <h3>The "Billionaire's" Way</h3>
+                    <!-- UPDATED BULLETS - DIRECTLY FROM YOUR POLLS -->
+                    <ul>
+                        <li>Find Your Perfect Career Path</li>
+                        <li>Master Investment Timing</li>
+                        <li>Build Your Purpose-Driven Business</li>
+                        <li>Achieve *True* Financial Freedom</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- == 4. MY STORY (THE RELATABILITY) == -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image-placeholder">
+                    [Your Photo Here]
+                </div>
+                <div class="story-content">
+                    <h3 class="gradient-text">I'm Not Supposed To Be Here.</h3>
+                    <!-- UPDATED: "Hackney" to "London" for broader appeal -->
+                    <p>I'm just a normal guy from London. Divorced parents, bottom set at school, uni dropout. The "system" wrote me off.</p>
+                    <p>But while everyone else was following the "safe" path, I was reverse-engineering the path of billionaires. And I found the one thing they *all* used: a strategic understanding of *timing* and *potential*.</p>
+                    <p>This isn't a "gift." It's a system. I used it to build my audience, my business, and my life. Now I'm giving you the keys. I'm not "gifted" - I just have the right map. This is that map.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- == 5. OFFER STACK (THE VALUE) == -->
+    <section class="offer-stack-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">Here's What You Get For $37</h2>
+            <p class="subtitle">You're not just "joining a Skool." You're getting the complete strategic blueprint for a fraction of the cost.</p>
+            
+            <div class="offer-stack">
+                <div class="offer-item">
+                    <div class="offer-icon">📚</div>
+                    <div class="offer-content">
+                        <h3>The "Billionaire's Blueprint" Course</h3>
+                        <p>The core system (Vedic + Numerology) to find your "WHY".</p>
+                    </div>
+                    <span class="value-badge">VALUE: £497</span>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon">🤝</div>
+                    <div class="offer-content">
+                        <h3>Private Skool Community</h3>
+                        <p>Access to me and 900+ other high-performers.</p>
+                    </div>
+                    <span class="value-badge">VALUE: £97/mo</span>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon">💬</div>
+                    <div class="offer-content">
+                        <h3>Weekly Live Q&A Calls</h3>
+                        <p>Get your personal questions answered by me. Live.</p>
+                    </div>
+                    <span class="value-badge">VALUE: £497/mo</span>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon">🛠️</div>
+                    <div class="offer-content">
+                        <h3>Toolkit & Resource Library</h3>
+                        <p>My personal templates, checklists, and tools.</p>
+                    </div>
+                    <span class="value-badge">VALUE: £197</span>
+                </div>
+            </div>
+            
+            <div class="total-value">
+                <p>Total Value: <span>£1,000+</span></p>
+                <p>Get It All Today For <span class="final-price">$37</span></p>
+            </div>
+            <a href="https://buy.stripe.com/test_aFa3cx1IaaoddJ7gxV2sM00" class="final-cta-button">Join Now for $37</a>
+        </div>
+    </section>
+    
+    <!-- == 6. GUARANTEE (RISK REVERSAL) == -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2 class="gradient-text">The "No-BS" Guarantee</h2>
+                <p>My reputation is on the line. If you join the Skool, go through the blueprint, and don't feel it's the single most actionable $37 you have *ever* spent on your future, I'll refund 100% of your money. No questions, no hassle.</p>
+                
+                <!-- NEW: Guarantee Signature Block -->
+                <div class="guarantee-signature">
+                    <div class="guarantee-photo">[Your Photo]</div>
+                    <div class="guarantee-text">
+                        <!-- Placeholder for a signature image -->
+                        <img src="https://placehold.co/200x60/2E2E2E/ffffff?text=Your+Signature&font=caveat" alt="Your Signature">
+                        <p>Rafy</p>
+                        <span>Creator, 'Billionaire's Blueprint'</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- == NEW: SOCIAL PROOF POPUP HTML == -->
+    <div class="social-proof-popup" id="social-proof-popup">
+        <div class="popup-icon">🔥</div>
+        <div class="popup-text" id="popup-text">
+            <p><strong>Someone</strong> from <strong>somewhere</strong> just joined!</p>
+            <span>a moment ago</span>
+        </div>
+    </div>
+
+    <script>
+        // === 24-HOUR (23:59:59) COUNTDOWN TIMER ===
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0;
+                    display.textContent = "OFFER EXPIRED";
+                    // You could also hide the form or change the price here
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            // Set timer to 23 hours, 59 minutes, 59 seconds
+            const twentyFourHours = 86399; 
+            const display = document.getElementById('countdown');
+            startTimer(twentyFourHours, display);
+        };
+
+        // === NEW: SOCIAL PROOF POPUP LOGIC ===
+        (function() {
+            const purchases = [
+                { name: 'Jean', location: 'France' },
+                { name: 'Paul', location: 'England' },
+                { name: 'Mike', location: 'New York' },
+                { name: 'Sarah', location: 'London' },
+                { name: 'Alex', location: 'Germany' },
+                { name: 'David', location: 'Manchester' },
+                { name: 'Fatima', location: 'Dubai' },
+                { name: 'Chris', location: 'Australia' },
+                { name: 'Daniel', location: 'Canada' },
+                { name: 'Liam', location: 'Ireland' }
+            ];
+
+            const popup = document.getElementById('social-proof-popup');
+            const popupText = document.getElementById('popup-text');
+            let lastIndex = -1;
+
+            function showRandomPurchase() {
+                let randomIndex = Math.floor(Math.random() * purchases.length);
+                
+                // Ensure we don't show the same one twice in a row
+                if (randomIndex === lastIndex) {
+                    randomIndex = (randomIndex + 1) % purchases.length;
+                }
+                lastIndex = randomIndex;
+
+                const purchase = purchases[randomIndex];
+                const timeAgo = Math.floor(Math.random() * 10) + 1; // 1-10 minutes ago
+
+                popupText.innerHTML = `
+                    <p><strong>${purchase.name}</strong> from <strong>${purchase.location}</strong> just joined!</p>
+                    <span>${timeAgo} minutes ago</span>
+                `;
+
+                popup.classList.add('show');
+
+                // Hide the popup after 4 seconds
+                setTimeout(() => {
+                    popup.classList.remove('show');
+                }, 4000);
+            }
+
+            // Start the loop
+            // First popup after 7 seconds
+            setTimeout(showRandomPurchase, 7000);
+
+            // Subsequent popups every 12 seconds
+            setInterval(showRandomPurchase, 12000);
+        })();
+    </script>
 </body>
 </html>
