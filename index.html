@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Congrats! You're In... (One More Step)</title>
+    
+    <script src="https://fast.wistia.com/embed/medias/lqhmalx56y.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
     <style>
         :root {
             --color-primary: #FF33A1;
@@ -81,34 +85,12 @@
 
         .vsl-container {
             margin: 3rem 0;
+            border: 2px solid var(--color-accent);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 229, 229, 0.2);
         }
 
-        .vsl-placeholder {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: var(--color-gray);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            border: 2px solid var(--color-accent);
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .vsl-placeholder::before {
-            content: '▶';
-            font-size: 3rem;
-            color: var(--color-primary);
-        }
-        
-        .vsl-placeholder p {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--color-primary);
-        }
-        
         .cta-button {
             display: block;
             width: 100%;
@@ -181,21 +163,17 @@
         </p>
         
         <div class="vsl-container">
-            <!-- 
-                THIS IS YOUR UPSELL VSL.
-                Script: "Congrats. You have the blueprint. Now you have 2 paths.
-                Path A: The 'Slow Path'. Go through the course yourself.
-                Path B: The 'Fast Path'. Let me *personally* install this for you.
-                As a new member, I'm offering a FREE 1-on-1 'Clarity Call' to build
-                your 90-day plan. I have 10 spots this week.
-                Click below to book your FREE call."
-            -->
-            <div class="vsl-placeholder" onclick="alert('This is the UPSELL VSL!')">
-                <p>WATCH THIS (MANDATORY)</p>
+            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                    <div class="wistia_embed wistia_async_lqhmalx56y videoFoam=true" style="height:100%;position:relative;width:100%">
+                        <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                            <img src="https://fast.wistia.com/embed/medias/lqhmalx56y/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            </div>
 
-        <!-- CALENDLY LINK INSERTED HERE -->
         <a href="https://calendly.com/rafy-/on-boarding-call?back=1&month=2025-11" class="cta-button" target="_blank">
             Book My FREE 1-on-1 Clarity Call NOW
         </a>
