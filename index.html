@@ -1,192 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congrats! You're In... (One More Step)</title>
-    
-    <script src="https://fast.wistia.com/embed/medias/lqhmalx56y.jsonp" async></script>
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're In — One More Step | Rafi's World</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://fast.wistia.com/embed/medias/lqhmalx56y.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "u7qcnghg1s");
+</script>
+<style>
+:root {
+  --bg: #0C0A09;
+  --surface: #1C1917;
+  --surface2: #292524;
+  --surface3: #3B3835;
+  --amber: #F59E0B;
+  --amber-glow: rgba(245,158,11,0.12);
+  --emerald: #34D399;
+  --rose: #FB7185;
+  --text: #F5F5F4;
+  --text-dim: #A8A29E;
+  --text-muted: #78716C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh}
+.page{max-width:760px;margin:0 auto;padding:48px 24px 80px}
 
-    <style>
-        :root {
-            --color-primary: #FF33A1;
-            --color-accent: #00E5E5;
-            --color-dark: #242424; /* NEW */
-            --color-gray: #2E2E2E; /* NEW */
-            --color-text: #ccc;
-        }
+/* HEADER */
+.confirm-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.3);color:var(--emerald);padding:8px 20px;border-radius:100px;font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:24px}
+.page-header{text-align:center;margin-bottom:48px}
+.page-header h1{font-family:'Instrument Serif',serif;font-size:clamp(32px,5vw,48px);font-weight:400;line-height:1.15;margin-bottom:12px}
+.page-header h1 em{color:var(--amber);font-style:italic}
+.page-header .sub{font-size:17px;color:var(--text-dim);max-width:540px;margin:0 auto 24px;line-height:1.6}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.email-notice{background:var(--surface);border:1px solid var(--surface2);border-radius:10px;padding:14px 20px;font-size:14px;color:var(--text-dim);display:inline-block}
+.email-notice strong{color:var(--amber)}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: #1B1B1B; /* USER'S CHOICE */
-            color: #fff;
-            line-height: 1.6;
-        }
+/* WARNING BAR */
+.warning-bar{background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:14px 20px;text-align:center;margin:32px 0 0;font-size:14px;color:var(--amber);font-weight:600}
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 4rem 15px;
-            text-align: center;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientMove 3s ease-in-out infinite;
-        }
+/* VSL */
+.vsl-section{margin:48px 0}
+.vsl-label{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.vsl-label::before{content:'';width:16px;height:2px;background:var(--amber)}
+.vsl-wrapper{background:var(--surface);border:2px solid var(--amber);border-radius:16px;overflow:hidden;box-shadow:0 0 40px var(--amber-glow)}
+.wistia_responsive_padding{padding:56.25% 0 0 0;position:relative}
+.wistia_responsive_wrapper{height:100%;left:0;position:absolute;top:0;width:100%}
 
-        .header-icon {
-            font-size: 3rem;
-            color: var(--color-accent);
-        }
+/* WHAT HAPPENS NEXT */
+.next-section{margin:48px 0}
+.next-title{font-family:'Instrument Serif',serif;font-size:24px;margin-bottom:8px;text-align:center}
+.next-title em{color:var(--amber);font-style:italic}
+.next-sub{text-align:center;font-size:14px;color:var(--text-dim);margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
 
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 900;
-            line-height: 1.2;
-            margin: 1rem 0;
-        }
-        
-        h1 span {
-            color: var(--color-primary);
-            display: block;
-        }
+.step{background:var(--surface);border:1px solid var(--surface2);border-radius:12px;padding:22px 24px;margin-bottom:12px;display:flex;align-items:flex-start;gap:16px;transition:border-color .3s}
+.step:hover{border-color:var(--amber)}
+.step-num{width:32px;height:32px;background:var(--amber);color:var(--bg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0}
+.step-text h4{font-size:15px;font-weight:700;margin-bottom:3px}
+.step-text p{font-size:14px;color:var(--text-dim);line-height:1.5}
 
-        h2 {
-            font-size: 1.5rem;
-            color: var(--color-text);
-            font-weight: 400;
-            margin-bottom: 2rem;
-        }
-        
-        p.check-email {
-            font-size: 1.1rem;
-            color: #fff;
-            background: var(--color-gray);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-        
-        p.check-email strong {
-            color: var(--color-accent);
-        }
+/* CTA */
+.cta-section{margin:48px 0 16px;text-align:center}
+.btn-book{display:block;width:100%;background:var(--amber);color:var(--bg);padding:20px;border:none;border-radius:10px;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:1px;cursor:pointer;text-align:center;text-decoration:none;transition:all .3s;position:relative;overflow:hidden}
+.btn-book:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,158,11,0.35)}
+.btn-book::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);animation:shimmer 3s infinite}
+@keyframes shimmer{0%{left:-100%}100%{left:100%}}
 
-        .vsl-container {
-            margin: 3rem 0;
-            border: 2px solid var(--color-accent);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 229, 229, 0.2);
-        }
+.cta-note{margin-top:14px;font-size:13px;color:var(--text-muted)}
+.cta-note span{color:var(--rose);font-weight:600}
 
-        .cta-button {
-            display: block;
-            width: 100%;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-            color: #fff;
-            padding: 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            text-align: center;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(255, 51, 161, 0.3);
-            animation: pulse 2s infinite;
-        }
+/* SKIP LINK */
+.skip-link{display:block;text-align:center;margin-top:24px;color:var(--text-muted);font-size:13px;text-decoration:underline;text-underline-offset:3px;transition:color .3s}
+.skip-link:hover{color:var(--text-dim)}
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 51, 161, 0.4);
-        }
-        
-        .cta-subtitle {
-            font-size: 1rem;
-            color: #aaa;
-            margin-top: 1rem;
-            font-weight: 600;
-        }
-        
-        .no-thanks {
-            display: block;
-            color: #777;
-            text-decoration: underline;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-        }
-        
-        .no-thanks:hover {
-            color: #999;
-        }
+/* WHAT YOU'LL DISCOVER */
+.preview-section{margin:48px 0;background:var(--surface);border:1px solid var(--surface2);border-radius:16px;padding:32px 28px}
+.preview-section h3{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:16px;text-align:center}
+.preview-section h3 em{color:var(--amber);font-style:italic}
+.preview-list{list-style:none;max-width:480px;margin:0 auto}
+.preview-list li{font-size:14px;color:var(--text-dim);padding:7px 0;display:flex;align-items:flex-start;gap:8px}
+.preview-list li::before{content:'✓';color:var(--emerald);font-weight:700;flex-shrink:0}
 
-        @keyframes gradientMove {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
+/* FOOTER */
+.footer{text-align:center;padding:32px 24px;font-size:12px;color:var(--text-muted);border-top:1px solid var(--surface2);margin-top:48px}
 
-    </style>
+/* MOBILE */
+@media(max-width:768px){
+  .page{padding:32px 16px 60px}
+  .page-header h1{font-size:28px}
+  .page-header .sub{font-size:15px}
+  .confirm-badge{font-size:11px;padding:6px 16px}
+  .email-notice{font-size:13px;padding:12px 16px}
+  .warning-bar{font-size:13px;padding:12px 16px}
+  .vsl-section{margin:36px 0}
+  .vsl-wrapper{border-radius:12px}
+  .next-title{font-size:20px}
+  .step{padding:18px 18px;gap:12px}
+  .step-num{width:28px;height:28px;font-size:13px}
+  .step-text h4{font-size:14px}
+  .step-text p{font-size:13px}
+  .btn-book{padding:18px;font-size:15px;min-height:56px}
+  .preview-section{padding:24px 20px}
+  .preview-section h3{font-size:18px}
+  .preview-list li{font-size:13px}
+}
+@media(max-width:390px){
+  .page-header h1{font-size:25px}
+  .btn-book{font-size:14px}
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <div class="header-icon">✅</div>
-        
-        <h1><span>Congrats. You're In.</span>
-            (But Don't Close This Page)</h1>
-        
-        <h2>Your login for the Skool is on its way to your inbox.</h2>
-        
-        <p class="check-email">
-            Check your email for <strong>"Your 'Billionaire's Blueprint' Access"</strong>.
-        </p>
-        
-        <div class="vsl-container">
-            <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                    <div class="wistia_embed wistia_async_lqhmalx56y videoFoam=true" style="height:100%;position:relative;width:100%">
-                        <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                            <img src="https://fast.wistia.com/embed/medias/lqhmalx56y/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+<div class="page">
 
-        <a href="https://calendly.com/rafy-/on-boarding-call?back=1&month=2025-11" class="cta-button" target="_blank">
-            Book My FREE 1-on-1 Clarity Call NOW
-        </a>
-        
-        <p class="cta-subtitle">
-            🔥 WARNING: Spots are *Extremely* Limited.
-        </p>
-        
-        <a href="https://skool.com/your-community-link" class="no-thanks">
-            No thanks, I'll take the 'slow path' and go straight to the community
-        </a>
-
+  <!-- HEADER -->
+  <div class="page-header">
+    <div class="confirm-badge">✓ You're In</div>
+    <h1>Congrats. Now <em>Don't Close This Page.</em></h1>
+    <p class="sub">Your Billionaire's Blueprint access is on its way to your inbox. But before you go — there's a free bonus waiting for you that most people miss.</p>
+    <div class="email-notice">
+      📩 Look for <strong>"Your 'Billionaire's Blueprint' Access"</strong> in your inbox. Check spam if you don't see it within 5 minutes.
     </div>
+    <div class="warning-bar">
+      ⚡ Don't skip this step — the people who book the call below implement 3x faster than those who don't.
+    </div>
+  </div>
+
+  <!-- VSL — Upsell/Onboarding priming video -->
+  <div class="vsl-section">
+    <div class="vsl-label">🎁 Your Free Bonus — Watch First</div>
+    <div class="vsl-wrapper">
+      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+          <div class="wistia_embed wistia_async_lqhmalx56y videoFoam=true" style="height:100%;position:relative;width:100%">
+            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+              <img src="https://fast.wistia.com/embed/medias/lqhmalx56y/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT HAPPENS ON THE CALL -->
+  <div class="next-section">
+    <h2 class="next-title">What Happens on Your <em>Free Call</em></h2>
+    <p class="next-sub">This isn't a sales pitch. It's a 1-on-1 onboarding session to make sure you get results from the course as fast as possible.</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>We Map Your Starting Point</h4>
+        <p>I'll look at where you are right now — your goals, your blocks, and what you want to get out of the Blueprint — so I can point you to the exact modules that matter most for your situation.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>You Get a Custom Action Plan</h4>
+        <p>Instead of guessing which lesson to start with, you'll leave the call with a clear, prioritised roadmap. No overwhelm. Just the fastest path to your first win.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>I Answer Your Burning Questions</h4>
+        <p>Bring anything — your chart, your career, your relationship situation. This is your chance to get personalised guidance before you even start the course.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <a href="https://calendly.com/rafy-/on-boarding-call?back=1&month=2025-11" class="btn-book" target="_blank">
+      Book My Free 1-on-1 Clarity Call →
+    </a>
+    <p class="cta-note"><span>🔥 Warning:</span> Spots are extremely limited. I only take a handful of these per week.</p>
+  </div>
+
+  <!-- PREVIEW WHAT THEY'LL LEARN -->
+  <div class="preview-section">
+    <h3>Inside The <em>Blueprint</em> You Just Unlocked:</h3>
+    <ul class="preview-list">
+      <li>How to read your Vedic birth chart (even if you're a complete beginner)</li>
+      <li>Your Life Path number and what it reveals about your ideal career</li>
+      <li>The Dasha timing system — know exactly when your next "green light" window opens</li>
+      <li>How to cross-reference Numerology with Vedic for near-perfect accuracy</li>
+      <li>Specific remedies (mantras, gemstones, behavioural shifts) for your chart</li>
+      <li>Live weekly Q&A sessions with Rafi + private community access</li>
+    </ul>
+  </div>
+
+  <!-- SKIP LINK — Maciek: always give the option, don't force -->
+  <a href="https://skool.com/your-community-link" class="skip-link">
+    No thanks, take me straight to the community →
+  </a>
+
+</div>
+
+<footer class="footer">&copy; 2025 Rafi's World. All rights reserved.</footer>
 
 </body>
 </html>
